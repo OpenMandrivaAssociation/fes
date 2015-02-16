@@ -38,7 +38,6 @@ for %{name}.
 %prep
 %setup -q
 %patch0 -p1
-find . -name "*.py" |xargs 2to3 -w
 
 pushd src
     autoreconf -ifs
