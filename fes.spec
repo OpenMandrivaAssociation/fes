@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	python2-devel
+BuildRequires:	python2
 
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
