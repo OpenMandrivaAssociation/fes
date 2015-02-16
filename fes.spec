@@ -2,7 +2,7 @@
 
 Name:		fes
 Version:	0.1
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Summary:	Fast Exhaustive Search
