@@ -13,7 +13,8 @@ ExclusiveArch:	x86_64
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-%{py2_requires -d}
+BuildRequires:	python2-devel
+
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
 Patch0:		%{name}-dynamic.patch
