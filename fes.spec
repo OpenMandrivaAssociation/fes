@@ -18,7 +18,7 @@ BuildRequires:	python2
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
 
-BuildConflicts: /usr/bin/python3.4
+
 
 Patch0:		%{name}-dynamic.patch
 
@@ -42,6 +42,7 @@ for %{name}.
 %prep
 %setup -q
 %patch0 -p1
+find . -name "boilerplate_generator.py" |xargs 2to3 -w
 
 pushd src
     autoreconf -ifs
