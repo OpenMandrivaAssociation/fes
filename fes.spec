@@ -19,6 +19,8 @@ BuildRequires:	python2
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
 BuildRequires:	texlive-latex.bin
+BuildRequires:	texlive-kpathsea.bin
+BuildRequires:	texlive-kpathsea
 BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 
