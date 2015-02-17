@@ -59,10 +59,17 @@ export PATH=`pwd`:$PATH
 pushd src
     export CCASFLAGS="%{optflags} -Wa,--noexecstack"
     %configure --disable-static --enable-dynamic
-    make %{?_smp_mflags}
-    pushd doc
-	pdflatex doc.tex
-    popd
+    %make
+#########################################################
+#  I can't find the format file `pdflatex.fmt'!
+#  old texlive-kpathsea bug , ovewrite the texlive config files.
+# The texlive config files should be harcoded %config(noreplace)
+#  a packager should know this. texlive bugs i won't fix.Sflo
+#
+#    pushd doc
+#	pdflatex doc.tex
+#    popd
+#########################################################
 popd
 
 %install
@@ -83,6 +90,6 @@ popd
 
 %files		devel
 %doc src/TODO
-%doc src/doc/doc.pdf
+#doc src/doc/doc.pdf
 %{_includedir}/fes_interface.h
 %{_libdir}/libfes.so
