@@ -1,4 +1,5 @@
 # http://trac.sagemath.org/sage_trac/ticket/13162
+# Redundant "const" breaks build with clang. sflo
 
 Name:		fes
 Version:	0.1
@@ -17,7 +18,7 @@ BuildRequires:	python2-devel
 BuildRequires:	python2
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
-
+BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 
 Patch0:		%{name}-dynamic.patch
@@ -48,6 +49,8 @@ pushd src
 popd
 
 %build
+export CC=gcc
+export CXX=g++
 ln -s %{_bindir}/python2 python
 export PATH=`pwd`:$PATH
 pushd src
