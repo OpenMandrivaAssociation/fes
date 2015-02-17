@@ -42,13 +42,14 @@ for %{name}.
 %prep
 %setup -q
 %patch0 -p1
-find . -name "boilerplate_generator.py" |xargs 2to3 -w
 
 pushd src
     autoreconf -ifs
 popd
 
 %build
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
 pushd src
     export CCASFLAGS="%{optflags} -Wa,--noexecstack"
     %configure --disable-static --enable-dynamic
