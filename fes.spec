@@ -18,6 +18,7 @@ BuildRequires:	python2-devel
 BuildRequires:	python2
 BuildRequires:	texlive
 BuildRequires:	texlive-collection-science
+BuildRequires:	texlive-latex.bin
 BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 
