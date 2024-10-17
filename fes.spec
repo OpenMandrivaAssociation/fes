@@ -7,7 +7,7 @@ Release:	3
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Summary:	Fast Exhaustive Search
-URL:		http://www.lifl.fr/~bouillag
+URL:		https://www.lifl.fr/~bouillag
 Source0:	http://www.lifl.fr/~bouillag/download/fes-0.1.spkg
 Source1:	%{name}.rpmlintrc
 ExclusiveArch:	x86_64
